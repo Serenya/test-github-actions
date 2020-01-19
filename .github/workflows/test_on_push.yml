@@ -34,9 +34,9 @@ jobs:
         pipenv run coverage report
 
     - name: npm install
-      uses: actions/npm@master
+      uses: actions/setup-node@v1
       with:
-        args: install
+        node-version: 12.x
     - name: serverless install
       run: |
         npm install -g serverless
